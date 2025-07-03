@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitrix24 Monitoreo de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            padding-top: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 800px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            min-height: 100px;
+            overflow-y: auto;
+            max-height: 400px; /* Permite ver muchos logs */
+            background-color: #fcfcfc;
+            line-height: 1.4;
+        }
+        .error { color: #d32f2f; }
+        .success { color: #388e3c; }
+        .info { color: #0288d1; }
+        .product-info { color: #5c6bc0; font-weight: normal; margin-left: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Monitoreo de Productos en Negociación</h1>
+        <p>Esta aplicación escucha cambios en la pestaña "Productos" de la Negociación.</p>
+        <p><strong>Instrucciones:</strong> Ve a la pestaña "Productos" de esta misma Negociación y añade, edita o elimina un producto para ver los detalles aquí.</p>
+        <div id="message"></div>
+    </div>
+
+    <script src="//api.bitrix24.com/api/v1/"></script>
+    
+    <script src="app.js"></script>
+</body>
+</html>
